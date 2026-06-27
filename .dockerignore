@@ -1,0 +1,17 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.git/
+.gitignore
+.env
+*.sqlite3
+.DS_Store
+node_modules/
+.idea/
+.vscode/
+*.log
+staticfiles/
+media/
+.github/

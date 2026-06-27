@@ -1,0 +1,25 @@
+{% extends "admin/index.html" %}
+{% load i18n %}
+
+{% block content %}
+<div id="dashboard-stats" style="margin-bottom: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+    <div style="background: #f0f7ff; border-radius: 8px; padding: 20px; text-align: center; border-left: 4px solid #417690;">
+        <h3 style="margin: 0; font-size: 2em; color: #417690;">{{ dashboard.total_patients_today }}</h3>
+        <p style="margin: 5px 0 0; color: #666;">New Patients Today</p>
+    </div>
+    <div style="background: #fff7f0; border-radius: 8px; padding: 20px; text-align: center; border-left: 4px solid #e67e22;">
+        <h3 style="margin: 0; font-size: 2em; color: #e67e22;">{{ dashboard.pending_bookings }}</h3>
+        <p style="margin: 5px 0 0; color: #666;">Pending Bookings</p>
+    </div>
+    <div style="background: #fff0f0; border-radius: 8px; padding: 20px; text-align: center; border-left: 4px solid #e74c3c;">
+        <h3 style="margin: 0; font-size: 2em; color: #e74c3c;">{{ dashboard.unverified_caregivers }}</h3>
+        <p style="margin: 5px 0 0; color: #666;">Unverified Caregivers</p>
+    </div>
+    <div style="background: #f0fff0; border-radius: 8px; padding: 20px; text-align: center; border-left: 4px solid #27ae60;">
+        <h3 style="margin: 0; font-size: 2em; color: #27ae60;">&#8377;{{ dashboard.revenue_today }}</h3>
+        <p style="margin: 5px 0 0; color: #666;">Revenue Today</p>
+    </div>
+</div>
+
+{{ block.super }}
+{% endblock %}
